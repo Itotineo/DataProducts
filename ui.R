@@ -7,7 +7,7 @@ shinyUI(pageWithSidebar(
       selectInput('Cut', 'Select Cut:', c('Good' ,'Ideal', 'V.Good')),
       selectInput('Color', 'Select Color:', c('D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L')),
       selectInput('Clarity', 'Select Clarity:', c('I1', 'I2', 'IF', 'SI1', 'SI2', 'VS1', 'VS2', 'VVS1', 'VVS2')),
-      numericInput('Depth', 'Enter Depth:', 10.0 , min = .1, max = 5.0, step = 0.1),
+      numericInput('Depth', 'Enter Depth:', 10.0 , min = .1, max = 80.0, step = 0.1),
       submitButton('Submit')
       ),
    mainPanel(
