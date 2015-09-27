@@ -2,7 +2,7 @@
 # Developing Data Products - Shiny Application and Reproducible Pitch
 
 ## Overview
-For the developing Data Products course project I have created a Shiny Application which will predict daimond price on the basis of chosen parameters. Daimond dataset which I have collected from the website http://www.pricescope.com/. Daimond price determined by several factors, such as carat, Clarity, Cut etc. In my dataset I have choosen 6 predictive variables - Shape, Carat,Cut, Color, Clarity, Depth.
+For the developing Data Products course project I have created a Shiny Application which will predict diamond price on the basis of chosen parameters. Daimond dataset which I have collected from the website http://www.pricescope.com/. Daimond price determined by several factors, such as carat, Clarity, Cut etc. In my dataset I have choosen 6 predictive variables - Shape, Carat,Cut, Color, Clarity, Depth.
 
 ## Data Preparation
 Read the dataset [Diamond_price.csv](https://github.com/anupb08/DataProducts) which is in the current directory.
@@ -49,23 +49,7 @@ head(mydata)
 
 ```r
 library(caret)
-```
-
-```
-## Loading required package: lattice
-## Loading required package: ggplot2
-```
-
-```r
 library(randomForest)
-```
-
-```
-## randomForest 4.6-10
-## Type rfNews() to see new features/changes/bug fixes.
-```
-
-```r
 inTrain <- createDataPartition(mydata$Price, p=0.7,list = FALSE)
 traindata <- mydata[inTrain,]
 testdata <- mydata[-inTrain,]
@@ -78,13 +62,13 @@ ggplot(aes(x=actual, y=prediction),data=data.frame(actual=testdata$Price, predic
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 The shiny appication I developed has been published in shiny server at [https://anupb08.shinyapps.io/DataProducts](https://anupb08.shinyapps.io/DataProducts).     
-To reproduce the shiny application on your local system, you need to install the relevent packages and download daimond dataset, server.R and ui.R from github [reposistory](https://github.com/anupb08/DataProducts).     
+To reproduce the shiny application on your local system, you need to install the relevent packages and download diamond dataset, server.R and ui.R from github [reposistory](https://github.com/anupb08/DataProducts).     
 
 ## How to Run the Application
-After downloading the above mentioned files you have to keep all the files in a folder and run **runApp()** function. Instantly application will be open locally in default browser. In the html page you will see at left side there are severel input parameters you have to select by drop down or increase/decrease the values. After selection you have press the Submit button, the daimond price will be shown at right side.   
+After downloading the above mentioned files you have to keep all the files in a folder and run **runApp()** function. Instantly application will be open locally in default browser. In the html page you will see at left side there are severel input parameters you have to select by drop down or increase/decrease the values. After selection you have press the Submit button, the diamond price will be shown at right side.   
 The predictive factors are :    
 1. Shape - Daimond shapes are Heart ,Round, Princess, Cushion,Pear,Marquise, Emerald, Radiant, Oval, Asscher    
-2. Carat - The weight or size of the daimond     
+2. Carat - The weight or size of the diamond     
 3. Cut - The proportions and relative angles of the facets. 3 type of cuts : Good ,Ideal, Very Good    
 4. Color - Color has several values, such as D, E, F, G, H, I, J, K, L       
 5. Clarity - The absence of internal imperfections. Clarity has following values: 'I1', 'I2', 'IF', 'SI1', 'SI2', 'VS1', 'VS2', 'VVS1', 'VVS2'     
