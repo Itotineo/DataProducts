@@ -8,7 +8,11 @@ shinyUI(pageWithSidebar(
       selectInput('Color', 'Select Color:', c('D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L')),
       selectInput('Clarity', 'Select Clarity:', c('I1', 'I2', 'IF', 'SI1', 'SI2', 'VS1', 'VS2', 'VVS1', 'VVS2')),
       numericInput('Depth', 'Enter Depth(40 to 80):', 40.0 , min = 40, max = 80.0, step = 0.1),
-      submitButton('Submit')
+      submitButton('Submit'),
+      br(),
+                p(strong(em("Documentation:",a("Diamond price",href="index.html")))),
+                p(strong(em("Github repository:",a("Diamond price",href="http://anupb08.github.io/DataProducts/"))))
+           
       ),
    mainPanel(
      h3('Accroding to your inputs, price of the diamond in USD is:'),
