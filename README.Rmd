@@ -2,4 +2,4 @@
 
 1. The documentation of the application can be found at [http://anupb08.github.io/DataProducts/](http://anupb08.github.io/DataProducts/)
 2. The  Shiny application can found at [https://anupb08.shinyapps.io/DataProducts](https://anupb08.shinyapps.io/DataProducts)
-3. The Pitch Presentation can found at [http://anupb08.github.io/PitchPresentation](http://anupb08.github.io/PitchPresentation) 
+3. The Pitch Presentation can found at [http://anupb08.github.io/PitchPresentation](http://anupb08.github.io/PitchPresentation#1) 
